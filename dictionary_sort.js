@@ -3,22 +3,25 @@ class Dictionary {
 
 }
 
-// const readline = require('readline');
+const readline = require('readline');
 // // your code here to initialize the program and take user input
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout
-// });
-// var myWord = []
-// rl.on('line', (words) => {
-//   if (words == ""){
-//     rl.close();
-//     console.log(myWord);
-//     sorting(myWord);
-//   } else {
-//     myWord.push(words);
-//   }
-// })
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+rl.setPrompt(`Silahkan masukkan kata baru \n`)
+var myWord = []
+rl.prompt()
+rl.on('line', (words) => {
+  rl.prompt()
+  if (words == ""){
+    rl.close();
+    console.log(myWord);
+    console.log(sorting(myWord));
+  } else {
+    myWord.push(words);
+  }
+})
 
 function sorting(myWord){
   var temp = ""
@@ -30,9 +33,8 @@ function sorting(myWord){
         myWord[i] = temp
       }
     }
-    // myWord[i] = myWord[i].split("");
   }
   return myWord
 }
 
-console.log(sorting(["siapa", "dia", "aku", "kamu", "kita"]));
+// console.log(sorting(["siapa", "dia", "aku", "kamu", "kita"]));

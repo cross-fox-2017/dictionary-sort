@@ -21,6 +21,7 @@ rl.on('line', (kata) => {
     for(var i=0; i < arrayTampung.length; i++){
 		console.log(arrayTampung[i]);
     }
+	
 	console.log(arrayTampung);
     rl.close()
   }

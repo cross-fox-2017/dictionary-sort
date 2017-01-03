@@ -9,7 +9,8 @@ const rl = readline.createInterface({
 rl.setPrompt("Type a word : ");
 rl.prompt();
   var arr = [];
-
+  var key = [];
+  var result =[];
 rl.on("line", (answer) => {
 
 
@@ -19,6 +20,20 @@ rl.on("line", (answer) => {
         rl.close();
         console.log("Congratulation your dictionary has "+arr.length+" word");
         console.log(arr);
+
+        for(var count = 0; count < arr.length;count++)
+        {ßßß
+          if(arr[count].toUpperCase())
+          {
+              key.push(count);
+          }else{
+            continue;
+          }
+        }
+        for(var i = 0; i < arr.length; i++)
+        {
+          if(arr[i] == )
+        }
         // return console.log(arr.sort().join("-"));;
       }else{
 

@@ -11,7 +11,7 @@ rl.on('line', (line) => {
 
   if(line === ""){
     tampung.sort(function (a, b) {
-    return a.toLowerCase()<b.toLowerCase()?-1:(a.toLowerCase()<b.toLowerCase()?1:0);
+    return a.toLowerCase().localeCompare(b.toLowerCase());
 });
   console.log(tampung.join(" "));
   //console.log(tampung);

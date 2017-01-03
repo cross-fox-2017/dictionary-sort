@@ -19,7 +19,7 @@ rl.on('line', (words) => {
     console.log(myWord);
     console.log(sorting(myWord));
   } else {
-    myWord.push(words);
+    myWord.push(words.toLowerCase());
   }
 })
 

@@ -27,7 +27,7 @@ rl.on("line", (answer) => {
   else if (answer == "") {
     for (var i = 0; i < arr.length; i++) {
       for (var j = 0; j < alphabet.length; j++) {
-        if (arr[i][0] == alphabet[j]) {
+        if (arr[i][0].toLowerCase() == alphabet[j]) {
           tam.push(alphabet.indexOf(alphabet[j]));
         }
       }

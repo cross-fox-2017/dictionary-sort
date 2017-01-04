@@ -22,13 +22,11 @@ rl.on("line", (answer) => {
         console.log("Congratulation your dictionary has "+key.length+" word");
         for(var x = 0; x < key.length;x++){
 
-
               if(x === key.length-1)
               {
-                console.log('if x === key');
+
                 result.push(key[x]);
               }else{
-                console.log('compare');
 
                 if(key[x].toLowerCase() > key[x+1].toLowerCase())
                 {
@@ -37,11 +35,10 @@ rl.on("line", (answer) => {
                   key[x+1] = temp;
                 }
               }
-
-
-
         }
           console.log("-"+key);
+        
+
 
 
         // arr.sort(function(a,b){

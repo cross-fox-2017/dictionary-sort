@@ -1,4 +1,5 @@
-let arrayPrompt = []
+let arrayPrompt = [];
+
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,

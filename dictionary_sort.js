@@ -9,18 +9,31 @@ const rl = readline.createInterface({
 rl.setPrompt("Type a word :");
 rl.prompt();
 
-var tampung = [];
+var arr = [];
 var sort = []
 
 rl.on('line', (input) => {
   if (input == "") {
-    rl.close();
-    console.log(tampung);
+  rl.close();
+  
+  for ( var i = 0; i < arr.length; i++ ) {
+    let smallest = i;
 
-    console.log( "Congratulation your dictionary has " + tampung.length + " word");
+    for ( var j = i + 1; j < arr.length; j++) {
+      if (arr[j] <  arr[smallest]) {
+        smallest = j;
+      }
+    }
+    var temp = arr[i];
+    arr[i] = arr[smallest];
+    arr[smallest] = temp
+  }
+
+    console.log(arr);
+    console.log( "Congratulation your dictionary has " + arr.length + " word");
   } else {
     rl.setPrompt("Type another word ( Or press enter to finish) :");
     rl.prompt();
-    tampung.push(input);
+    arr.push(input);
   }
 });

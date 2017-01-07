@@ -27,9 +27,13 @@ function sort(arr){
   let sortIndex = [];
   let sortLetter = [];
   let result = [];
+
   for(let i = 0; i < arr.length; i++){
+    arr[i] = arr[i].toLowerCase();
     arrayIndex.push(letter.indexOf(arr[i][0]));
   }
+
+  // Mulai sorting array index agar index dimulai dari yang paling kecil a-z
   while(arrayIndex.length !== 0){
     for(let i = 1; i < arrayIndex.length+1; i++){
       if(tampung === 0){
@@ -44,6 +48,7 @@ function sort(arr){
     tampung = 0;
     arrayIndex.splice(getArrayIndex, 1);
   }
+
   for(let i = 0; i < sortIndex.length; i++){
     sortLetter.push(letter[sortIndex[i]]);
   }

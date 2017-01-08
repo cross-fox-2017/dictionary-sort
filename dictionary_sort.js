@@ -15,7 +15,7 @@ rl.on('line', (words) => {
     console.log('kata-kata telah tersortir! : \n' + dictionary(words));
   }
   else {
-    arrWords.push(words.toLowerCase());
+    arrWords.push(words);
   }
 })
 

@@ -27,6 +27,7 @@ function sort(arr){
   let sortIndex = [];
   let sortLetter = [];
   let result = [];
+  var arr2 = [].concat(arr);
 
   for(let i = 0; i < arr.length; i++){
     arr[i] = arr[i].toLowerCase();
@@ -56,7 +57,7 @@ function sort(arr){
   for(let i = 0; i < sortLetter.length; i++){
     for(let j = 0; j < arr.length; j++){
       if(sortLetter[i] === arr[j][0]){
-        result.push(arr[j]);
+        result.push(arr2[j]);
       }
     }
   }

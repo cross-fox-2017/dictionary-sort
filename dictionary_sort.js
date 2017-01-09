@@ -22,3 +22,4 @@ rl.on('line', (answer) => {
 function Dictionary(answer){
   arrTmp.sort(function(asc, desc){return asc.localeCompare(desc)})//localeCompare mengabaikan inputan lowercase atau uppercase
   return arrTmp.join().replace(/\D/,'');
+}

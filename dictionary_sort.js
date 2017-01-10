@@ -11,24 +11,11 @@ rl.on('line', (words) => {
   rl.prompt()
   if (words == '') {
     rl.close();
-    console.log('kata-kata yang ter-input : \n' + arrWords)
-    console.log('kata-kata telah tersortir! : \n' + dictionary(words));
-  }
-  else {
-    arrWords.push(words);
-  }
-})
+    arrWords.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
 
-function dictionary (words) {
-  let hold = ''
-  for (let i = 0; i < arrWords.length; i++) {
-    for (let j = 0; j < arrWords[i].length; j++) {
-      if (arrWords[i] < arrWords[j]) {
-        hold = arrWords[j]
-        arrWords[j] = arrWords[i]
-        arrWords[i] = hold
-      }
-    }
+    console.log(arrWords);
   }
-  return arrWords
-}
+arrWords.push(words)
+})

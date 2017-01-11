@@ -16,28 +16,19 @@ rl.on('line', (input) => {
     if (input == '') {
         rl.close()
 
-
         console.log('Congratulation your dictionary has ' + arr.length + ' word');
 
+        arr.sort(function(a,b) {
+          return a.toLowerCase().localeCompare(b.toLowerCase())
+        })
+
         for (var i = 0; i < arr.length; i++) {
-            if (i === arr.length - 1) {
-                result.push(arr[i])
-            } else {
-                if (arr[i] > arr[i + 1]) {
-
-                    var tmp = arr[i];
-                    arr[i] = arr[i+1];
-                    arr[i+1] = tmp;
-
-                }
-            }
+          console.log(arr[i]);
         }
-        console.log(arr);
+
     } else {
         rl.setPrompt('Type another word: (Or PRES ENTER TO FINISH) : ');
         rl.prompt();
         arr.push(input)
     }
-
-
 });
